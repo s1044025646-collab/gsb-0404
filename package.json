@@ -1,0 +1,31 @@
+{
+  "name": "histogram-rectangle-backend",
+  "version": "1.0.0",
+  "description": "Windows 本地直方图最大矩形单调栈 API 与 CLI",
+  "type": "module",
+  "main": "dist/server.js",
+  "bin": {
+    "histogram-rect": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test \"dist/test/**/*.test.js\"",
+    "start": "npm run build && node dist/server.js",
+    "demo": "npm run build && node dist/cli/index.js demo",
+    "cli": "npm run build && node dist/cli/index.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "keywords": [
+    "histogram",
+    "monotonic-stack",
+    "sqlite",
+    "typescript"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "typescript": "^5.9.0"
+  }
+}
